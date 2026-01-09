@@ -1,6 +1,5 @@
 import React from "react";
 import {Link, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle} from "@heroui/react";
-import {ThemeSwitchComponent} from "../providers/ThemeProvider.tsx";
 
 export default function Navigation()
 {
@@ -25,7 +24,7 @@ export default function Navigation()
 
 
     return (
-        <Navbar onMenuOpenChange={setIsMenuOpen}>
+        <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="full">
             <NavbarContent>
                 <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="sm:hidden"/>
                 <NavbarBrand>
@@ -38,7 +37,6 @@ export default function Navigation()
             </NavbarContent>
             <NavbarContent justify="end">
                 <NavbarItem>
-                    <ThemeSwitchComponent/>
                 </NavbarItem>
             </NavbarContent>
 
