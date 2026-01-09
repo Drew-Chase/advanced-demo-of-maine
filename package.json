@@ -8,13 +8,9 @@
   "repository": "",
   "type": "module",
   "scripts": {
-    "build-api": "cargo build --release",
-    "run-api": "cargo run --bin advanced_demo_of_maine",
     "dev": "vite",
-    "build-frontend": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "watch": "cargo watch -x \"run --bin advanced_demo_of_maine\" -C dist -N --why -w ../src-actix/",
-    "build": "npm run \"build-frontend\" && npm run \"build-api\""
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
     "@heroui/react": "^2.8.5",
