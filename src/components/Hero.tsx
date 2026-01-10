@@ -2,6 +2,7 @@ import BackgroundVideo from "../videos/BackgroundVideo.mp4";
 import Logo from "../images/advanced-demo-logo.svg";
 import { Button } from "@heroui/react";
 import { Icon } from "@iconify-icon/react";
+import { Link } from "@heroui/react";
 
 export default function Hero() {
     return (
@@ -10,7 +11,7 @@ export default function Hero() {
                 <img src={Logo} className="w-[340px] h-[340px] invert" />
                 <div className="flex flex-row items-center justify-center gap-4 w-[500px]">
                     <Button radius="none" size="lg" fullWidth className="bg-white justify-start" >Get Started</Button>
-                    <Button variant="ghost" radius="none" size="lg" fullWidth color="secondary">
+                    <Button as={Link} href="#contact-container" variant="ghost" radius="none" size="lg" fullWidth color="secondary">
                         <div className="w-full text-start">
                             Contact Us
                         </div>

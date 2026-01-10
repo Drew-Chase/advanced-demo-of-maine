@@ -6,7 +6,7 @@ export default function History() {
         <div className="flex flex-row m-20 h-[500px] gap-4">
             <div className="text-left w-[50%]">
                 <h3 className="text-2xl uppercase">Since 2020</h3>
-                <h1 className="text-5xl">Advanced Demo has been
+                <h1 className="text-5xl font-semibold">Advanced Demo has been
                     proudly serving central Maine
                 </h1>
                 <p className="mt-10">
