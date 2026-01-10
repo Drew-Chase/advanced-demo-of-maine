@@ -6,6 +6,7 @@ use utility::asset_endpoint::AssetsAppConfig;
 use vite_actix::start_vite_server;
 
 mod utility;
+mod env_json;
 
 pub static DEBUG: bool = cfg!(debug_assertions);
 const PORT: u16 = 1421;
