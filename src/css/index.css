@@ -15,7 +15,7 @@
   scrollbar-gutter: stable;
 }
 
-body{
+body {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -41,7 +41,8 @@ body{
   color: hsl(var(--heroui-background));
 }
 
-input:focus-visible,textarea:focus-visible {
+input:focus-visible,
+textarea:focus-visible {
   outline: none !important;
 }
 
