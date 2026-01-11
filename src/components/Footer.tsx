@@ -13,7 +13,7 @@ export default function Footer() {
                 <span>Demo</span>
             </div>
             <p className="absolute w-[340px] h-[12px] left-1/2 -translate-x-1/2 top-[75px] font-sans italic font-normal text-[10px] leading-[12px] flex items-center text-white whitespace-nowrap">
-                {new Date().getFullYear()} © Advanced Demo. All Rights Reserved. Website by <span className="font-bold ml-1">LFIneractive LLC</span>.
+                {new Date().getFullYear()} © Advanced Demo. All Rights Reserved. Website by <span className="font-bold ml-1 underline">LFIneractive LLC</span>.
             </p>
         </footer>
     );
