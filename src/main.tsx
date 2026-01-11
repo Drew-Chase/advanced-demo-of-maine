@@ -10,6 +10,7 @@ import Services from "./pages/Services.tsx";
 import Career from "./pages/Career.tsx";
 import Navigation from "./components/Navigation.tsx";
 import { HeroUIProvider } from "@heroui/react";
+import Footer from "./components/Footer.tsx";
 
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -34,6 +35,7 @@ export function MainContentRenderer() {
                     <Route path="/career" element={<Career />} />
                 </Route>
             </Routes>
+            <Footer />
         </HeroUIProvider>
     );
 }
