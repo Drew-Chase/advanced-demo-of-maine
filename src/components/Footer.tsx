@@ -2,17 +2,17 @@ import mainLogo from '../images/advanced-demo-logo.svg';
 
 export default function Footer() {
     return (
-        <footer className="w-full h-[92px] bg-primary relative">
-            <img
-                src={mainLogo}
-                alt="Advanced Demo Logo"
-                className="absolute w-[64px] h-[64px] left-[100px] top-[17px] invert"
-            />
-            <div className="absolute left-[175px] top-[50%] -translate-y-1/2 flex flex-col text-white leading-[0.8] text-[24px]">
-                <span>Advanced</span>
-                <span>Demo</span>
+        <footer className="w-full h-24 bg-primary relative flex flex-col">
+
+            <div className="h-full flex flex-row ml-24 text-white text-xl items-center mt-[15px]">
+                <img
+                    src={mainLogo}
+                    alt="Advanced Demo Logo"
+                    className="w-[64px] h-[64px] invert flex flex-col"
+                />
+                <p className="ml-2">Advanced<br />Demo</p>
             </div>
-            <p className="absolute w-[340px] h-[12px] left-1/2 -translate-x-1/2 top-[75px] font-sans italic font-normal text-[10px] leading-[12px] flex items-center text-white whitespace-nowrap">
+            <p className="w-full italic text-[10px] flex justify-center text-white whitespace-nowrap">
                 {new Date().getFullYear()} © Advanced Demo. All Rights Reserved. Website by <span className="font-bold ml-1 underline">LFIneractive LLC</span>.
             </p>
         </footer>
