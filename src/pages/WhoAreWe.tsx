@@ -90,11 +90,11 @@ export default function WhoAreWe() {
             />
 
             {/* Header Section */}
-            <section className="mt-[76px] flex flex-col items-center text-center px-4 z-10 w-full">
-                <h1 className="w-full max-w-[767px] text-5xl font-medium leading-[56px] text-black">
+            <section className="mt-20 flex flex-col items-center text-center px-4 z-10 w-full">
+                <h1 className="w-full max-w-[767px] text-5xl font-medium text-black">
                     Our <span className="underline">mission</span> is to make work <span className="italic">meaningful</span>
                 </h1>
-                <p className="w-full max-w-[767px] mt-[18px] text-base leading-[19px] text-black font-light">
+                <p className="w-full max-w-[767px] mt-2 text-base text-black font-light">
                     Lorem ipsum dolor sit amet consectetur. Euismod iaculis gravida eleifend vulputate aliquet amet ornare euismod blandit. Lectus elit ipsum id enim eu neque vivamus tristique ultricies. Nunc sit hac nibh nisi habitasse vestibulum orci. Augue duis eget sed feugiat dignissim.
                 </p>
             </section>
@@ -108,10 +108,10 @@ export default function WhoAreWe() {
                     {/* Overlay */}
                     <div className="flex-1 flex flex-col justify-end bg-black/30 backdrop-blur-[2px] transition-opacity group-hover:bg-black/20">
                         {/* Content Section */}
-                        <div className="flex flex-row justify-between items-end p-[25px] text-white">
+                        <div className="flex flex-row justify-between items-end p-6 text-white">
                             <div className="flex flex-col">
-                                <h3 className="text-lg font-normal leading-[21px]">Our latest Commercial</h3>
-                                <p className="text-sm italic font-extralight leading-[16px] mt-1 opacity-80">Fall 2026</p>
+                                <h3 className="text-lg font-normal">Our latest Commercial</h3>
+                                <p className="text-sm italic font-extralight mt-1 opacity-80">Fall 2026</p>
                             </div>
 
                             {/* Play Button */}
@@ -127,16 +127,16 @@ export default function WhoAreWe() {
             <section className="mt-[85px] w-full flex flex-col items-center gap-[26px] z-10" style={{ fontFamily: "'Roboto', sans-serif" }}>
                 {/* Title Container */}
                 <div className="w-full max-w-[1280px] px-4 md:px-[186px] flex flex-col items-start">
-                    <h2 className="w-full text-5xl italic font-normal leading-[56px] text-black tracking-normal" style={{ fontVariant: "all-small-caps" }}>
+                    <h2 className="w-full text-5xl italic font-normal text-black tracking-normal" style={{ fontVariant: "all-small-caps" }}>
                         Our Family
                     </h2>
-                    <p className="w-full text-base font-light leading-[19px] text-black mt-2">
+                    <p className="w-full text-base font-light text-black mt-2">
                         Since the start we've been a family owned and operated company, handed down from father to sons
                     </p>
                 </div>
 
                 {/* Cards Container */}
-                <div className="flex flex-row justify-center items-stretch gap-[27px] flex-wrap pb-[100px] w-full max-w-[1280px] px-4">
+                <div className="flex flex-row justify-center items-stretch gap-7 flex-wrap pb-[100px] w-full max-w-[1280px] px-4">
                     {people.map((person, idx) => (
                         <div
                             key={idx}
@@ -154,17 +154,17 @@ export default function WhoAreWe() {
                             )}
 
                             {/* Person Image Area */}
-                            <div className="mx-3 mt-[9px] w-[90%] h-[361px] rounded-[29px] bg-[#222] overflow-hidden shrink-0 z-10">
+                            <div className="m-3 h-[360px] rounded-[29px] bg-[#222] shrink-0 z-10">
                                 <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: "url(.jpg)" }} />
                             </div>
 
                             {/* Person Name & Role */}
-                            <div className="px-3 mt-1 mb-2 flex flex-col z-10">
-                                <h3 className={`text-2xl ${person.isDark ? 'text-white' : 'text-black'}`} style={{ fontVariant: "all-small-caps", fontWeight: 400 }}>
-                                    <span className="font-normal">{person.firstName}</span> <span className="font-bold">{person.lastName}</span> {person.suffix}
+                            <div className="ml-3 mb-2 flex flex-col z-10">
+                                <h3 className={`text-s uppercase ${person.isDark ? 'text-white' : 'text-black'}`}>
+                                    <span>{person.firstName}</span> <span className="font-bold">{person.lastName}</span> <span className="text-xs">{person.suffix}</span>
                                 </h3>
-                                <div className={`w-[110px] h-[2px] rounded-full mt-[1px] mb-[2px] ${person.isDark ? 'bg-[#FFD701]' : 'bg-[#2A5240]'}`} />
-                                <p className={`text-xs italic font-light ${person.isDark ? 'text-white/70' : 'text-black/70'}`} style={{ fontWeight: 300 }}>
+                                <div className={`w-[110px] h-[2px] rounded-full mt-[1px] mb-[2px] ${person.isDark ? 'bg-secondary' : 'bg-primary'}`} />
+                                <p className={`text-xs italic font-light ${person.isDark ? 'text-white/70' : 'text-black/70'}`}>
                                     {person.role}
                                 </p>
                             </div>
@@ -190,7 +190,7 @@ export default function WhoAreWe() {
             </section>
 
             {/* Dark Timeline Section */}
-            <section className="w-full bg-black relative flex flex-col items-center pt-[50px] pb-[70px] overflow-hidden">
+            <section className="w-full bg-black relative flex flex-col items-center pt-[50px] pb-5 overflow-hidden">
                 {/* Internal Blobs (decorative) */}
                 <div className="absolute left-[calc(50%-800px)] w-[437.24px] h-[465.59px] rounded-[93px] pointer-events-none"
                     style={{
@@ -208,15 +208,15 @@ export default function WhoAreWe() {
                 />
 
                 {/* Section Title */}
-                <h2 className="text-3xl font-bold text-white text-center max-w-[420px] leading-[38px] z-10 px-4">
+                <h2 className="text-3xl font-bold text-white text-center max-w-[420px] z-10 px-4">
                     150+ companies have grown their infrastructure with us
                 </h2>
 
                 {/* Brand Logos Bar */}
-                <div className="mt-[50px] w-full max-w-[1240px] flex flex-row justify-start items-center gap-[40px] opacity-60 px-8 md:pl-[20px] z-10 flex-wrap">
+                <div className="mt-12 w-full max-w-[1240px] flex flex-row justify-start items-center gap-10 opacity-60 px-8 md:pl-5 z-10 flex-wrap">
                     <div className="flex flex-row items-center gap-1.5 translate-y-[2px]">
                         <span className="text-white text-3xl font-bold tracking-tight" style={{ fontFamily: "'Roboto', sans-serif" }}>Walmart</span>
-                        <Icon icon="bi:asterisk" className="text-[#FFD701] text-[22px] rotate-[15deg] font-bold" />
+                        <Icon icon="bi:asterisk" className="text-secondary size-6 rotate-[15deg] font-bold" />
                     </div>
                     <div className="flex flex-row items-center">
                         <span className="text-white text-3xl font-serif tracking-tight">Maine</span>
@@ -224,7 +224,7 @@ export default function WhoAreWe() {
                     </div>
                     <div className="flex flex-row items-center gap-1.5 translate-y-[2px]">
                         <span className="text-white text-3xl font-bold tracking-tight" style={{ fontFamily: "'Roboto', sans-serif" }}>Walmart</span>
-                        <Icon icon="bi:asterisk" className="text-[#FFD701] text-[22px] rotate-[15deg] font-bold" />
+                        <Icon icon="bi:asterisk" className="text-secondary size-6 rotate-[15deg] font-bold" />
                     </div>
                     <div className="flex flex-row items-center">
                         <span className="text-white text-3xl font-serif tracking-tight">Maine</span>
@@ -232,7 +232,7 @@ export default function WhoAreWe() {
                     </div>
                     <div className="flex flex-row items-center gap-1.5 translate-y-[2px]">
                         <span className="text-white text-3xl font-bold tracking-tight" style={{ fontFamily: "'Roboto', sans-serif" }}>Walmart</span>
-                        <Icon icon="bi:asterisk" className="text-[#FFD701] text-[22px] rotate-[15deg] font-bold" />
+                        <Icon icon="bi:asterisk" className="text-secondary size-6 rotate-[15deg] font-bold" />
                     </div>
                     <div className="flex flex-row items-center">
                         <span className="text-white text-3xl font-serif tracking-tight">Maine</span>
@@ -241,32 +241,32 @@ export default function WhoAreWe() {
                 </div>
 
                 {/* Separator Line */}
-                <div className="w-full max-w-[1240px] px-8 md:pl-[20px] z-10 mt-[10px]">
+                <div className="w-full max-w-[1240px] px-8 md:pl-5 z-10 mt-3">
                     <div className="w-full h-[1px] bg-white/30" />
                 </div>
 
                 {/* Timeline Horizontal Area */}
-                <div className="mt-[34px] w-full z-10 overflow-x-auto overflow-y-hidden no-scrollbar px-8 md:px-[143px]">
+                <div className="mt-9 w-full z-10 overflow-x-auto overflow-y-hidden no-scrollbar px-8 md:px-[143px]">
                     <div className="flex flex-col">
                         {/* Timeline Content Row */}
                         <div className="flex flex-row">
                             {timelineItems.map((item, idx) => (
-                                <div key={idx} className="flex-shrink-0 w-[396px] flex flex-col border-l border-white/20 pl-[28px]">
+                                <div key={idx} className="flex-shrink-0 w-[396px] flex flex-col border-l border-white/20 pl-7">
                                     {/* Year Badge */}
-                                    <div className="w-[55px] h-[26px] bg-[#FFD701]/25 rounded-[4px] flex items-center justify-center">
-                                        <span className="text-[#FFD701] font-bold text-[18px]">{item.year}</span>
+                                    <div className="w-14 h-6 bg-[#FFD701]/25 rounded-[4px] flex items-center justify-center">
+                                        <span className="text-secondary font-bold size-4 flex justify-center items-center">{item.year}</span>
                                     </div>
 
-                                    <div className="mt-[7px] flex flex-col">
-                                        <h4 className="text-3xl font-bold text-white leading-[33px]">{item.title}</h4>
-                                        <p className="text-lg text-white opacity-80 font-normal leading-[21px] mt-0.5">{item.subtitle}</p>
+                                    <div className="mt-2 flex flex-col">
+                                        <h4 className="text-3xl font-bold text-white">{item.title}</h4>
+                                        <p className="text-lg text-white opacity-80 font-normal mt-0.5">{item.subtitle}</p>
                                     </div>
 
-                                    <p className="mt-[20px] text-base text-white/50 leading-[19px] font-normal max-w-[304px]">
+                                    <p className="mt-5 text-base text-white/50 font-normal max-w-[304px]">
                                         {item.description}
                                     </p>
 
-                                    <div className="mt-5 mb-[15px]">
+                                    <div className="mt-5 mb-4">
                                         <span className="text-base font-bold text-white opacity-80">{item.number}</span>
                                     </div>
                                 </div>
@@ -274,12 +274,12 @@ export default function WhoAreWe() {
                         </div>
 
                         {/* Diamond Markers Row with Horizontal Line */}
-                        <div className="flex flex-row items-center">
+                        <div className="flex flex-row items-center pb-1">
                             {timelineItems.map((_, idx) => (
-                                <div key={idx} className="flex-shrink-0 w-[396px] flex flex-row items-center">
+                                <div key={idx} className="w-[396px] flex flex-row items-center">
                                     {/* Diamond Marker */}
                                     <div
-                                        className={`w-[10px] h-[10px] border border-[#FFD701] rotate-45 shadow-[0px_0px_4.5px_#FFD701] -ml-[5px] shrink-0 ${idx === 0 ? "bg-[#9F8603]/50" : idx === 1 ? "bg-[#9F8603]/70" : "bg-[#9F8603]"}`}
+                                        className={`w-[10px] h-[10px] border border-[#FFD701] rotate-45 shadow-[0px_0px_4.5px_#FFD701] -ml-1 shrink-0 ${idx === 0 ? "bg-[#9F8603]/50" : idx === 1 ? "bg-[#9F8603]/70" : "bg-[#9F8603]"}`}
                                     />
                                     {/* Horizontal Line Segment */}
                                     <div className="flex-1 h-[1px] bg-white/30" />
