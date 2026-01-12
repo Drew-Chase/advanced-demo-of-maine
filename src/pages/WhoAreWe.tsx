@@ -1,4 +1,5 @@
 import { Icon } from "@iconify-icon/react";
+import ContactUs from "../components/ContactUs";
 
 export default function WhoAreWe() {
     const people = [
@@ -292,6 +293,7 @@ export default function WhoAreWe() {
                 {/* Edge Fade for Scroll Hint */}
                 <div className="absolute right-0 top-0 bottom-0 w-[150px] bg-gradient-to-l from-black to-transparent pointer-events-none hidden md:block" />
             </section>
+            <ContactUs />
         </div>
     );
 }
