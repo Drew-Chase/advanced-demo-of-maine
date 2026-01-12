@@ -2,17 +2,19 @@ import mainLogo from '../images/advanced-demo-logo.svg';
 
 export default function Footer() {
     return (
-        <footer className="w-full h-24 bg-primary relative flex flex-col">
-
-            <div className="h-full flex flex-row ml-24 text-white text-xl items-center mt-[15px]">
+        <footer className="w-full grid grid-cols-3 items-center px-24 py-4">
+            {/* Logo section */}
+            <div className="flex flex-row text-black text-xl items-center">
                 <img
                     src={mainLogo}
                     alt="Advanced Demo Logo"
-                    className="w-[64px] h-[64px] invert flex flex-col"
+                    className="h-16"
                 />
                 <p className="ml-2">Advanced<br />Demo</p>
             </div>
-            <p className="w-full italic text-[10px] flex justify-center text-white whitespace-nowrap">
+
+            {/* Copyright text - centered in the middle grid column */}
+            <p className="italic text-[10px] text-black text-center">
                 {new Date().getFullYear()} © Advanced Demo. All Rights Reserved. Website by <span className="font-bold ml-1 underline">LFIneractive LLC</span>.
             </p>
         </footer>
