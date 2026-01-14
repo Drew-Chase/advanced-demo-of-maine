@@ -1,5 +1,8 @@
 import { Icon } from "@iconify-icon/react";
 import ContactUs from "../components/ContactUs";
+import WalmartLogo from "../images/WalmartLogo.svg";
+import MaineGovLogo from "../images/MaineGovLogo.svg";
+import { Image } from "@heroui/react";
 
 export default function WhoAreWe() {
     const people = [
@@ -215,30 +218,12 @@ export default function WhoAreWe() {
 
                 {/* Brand Logos Bar */}
                 <div className="mt-12 w-full max-w-[1240px] flex flex-row justify-start items-center gap-10 opacity-60 px-8 md:pl-5 z-10 flex-wrap">
-                    <div className="flex flex-row items-center gap-1.5 translate-y-[2px]">
-                        <span className="text-white text-3xl font-bold tracking-tight" style={{ fontFamily: "'Roboto', sans-serif" }}>Walmart</span>
-                        <Icon icon="bi:asterisk" className="text-secondary size-6 rotate-[15deg] font-bold" />
-                    </div>
-                    <div className="flex flex-row items-center">
-                        <span className="text-white text-3xl font-serif tracking-tight">Maine</span>
-                        <span className="text-white text-xl font-serif">.gov</span>
-                    </div>
-                    <div className="flex flex-row items-center gap-1.5 translate-y-[2px]">
-                        <span className="text-white text-3xl font-bold tracking-tight" style={{ fontFamily: "'Roboto', sans-serif" }}>Walmart</span>
-                        <Icon icon="bi:asterisk" className="text-secondary size-6 rotate-[15deg] font-bold" />
-                    </div>
-                    <div className="flex flex-row items-center">
-                        <span className="text-white text-3xl font-serif tracking-tight">Maine</span>
-                        <span className="text-white text-xl font-serif">.gov</span>
-                    </div>
-                    <div className="flex flex-row items-center gap-1.5 translate-y-[2px]">
-                        <span className="text-white text-3xl font-bold tracking-tight" style={{ fontFamily: "'Roboto', sans-serif" }}>Walmart</span>
-                        <Icon icon="bi:asterisk" className="text-secondary size-6 rotate-[15deg] font-bold" />
-                    </div>
-                    <div className="flex flex-row items-center">
-                        <span className="text-white text-3xl font-serif tracking-tight">Maine</span>
-                        <span className="text-white text-xl font-serif">.gov</span>
-                    </div>
+                    <Image src={WalmartLogo} alt="Walmart" />
+                    <Image src={MaineGovLogo} alt="Maine.gov" />
+                    <Image src={WalmartLogo} alt="Walmart" />
+                    <Image src={MaineGovLogo} alt="Maine.gov" />
+                    <Image src={WalmartLogo} alt="Walmart" />
+                    <Image src={MaineGovLogo} alt="Maine.gov" />
                 </div>
 
                 {/* Separator Line */}
