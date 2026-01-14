@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 
 import "./css/index.css";
@@ -23,9 +23,11 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
 
 export function MainContentRenderer() {
     const navigate = useNavigate();
+    const location = useLocation();
+    const isNavDark = location.pathname !== "/";
     return (
         <HeroUIProvider navigate={navigate}>
-            <Navigation />
+            <Navigation isNavDark={isNavDark} />
             <Routes>
                 <Route>
                     <Route path="/" element={<Home />} />

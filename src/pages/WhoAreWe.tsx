@@ -217,7 +217,7 @@ export default function WhoAreWe() {
                 </h2>
 
                 {/* Brand Logos Bar */}
-                <div className="ml-10 mt-12 w-full flex flex-row justify-start items-center gap-10 opacity-60 px-8 md:pl-36 z-10 flex-wrap">
+                <div className="ml-10 mt-12 w-full flex flex-row justify-start items-center gap-10 opacity-30 px-8 md:pl-36 z-10 flex-wrap">
                     <Image src={WalmartLogo} alt="Walmart" />
                     <Image src={MaineGovLogo} alt="Maine.gov" />
                     <Image src={WalmartLogo} alt="Walmart" />
@@ -279,6 +279,8 @@ export default function WhoAreWe() {
                 <div className="absolute right-0 top-0 bottom-0 w-[150px] bg-gradient-to-l from-black to-transparent pointer-events-none hidden md:block" />
             </section>
             <ContactUs />
-        </div>
+        </div >
     );
 }
+
+WhoAreWe.isNavDark = true;

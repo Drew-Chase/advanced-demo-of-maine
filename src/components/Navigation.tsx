@@ -2,7 +2,7 @@ import Logo from "../images/advanced-demo-logo.svg";
 import React from "react";
 import { Link, Navbar, NavbarBrand, NavbarContent, NavbarMenu, NavbarMenuItem, NavbarMenuToggle, Image, Divider } from "@heroui/react";
 
-export default function Navigation() {
+export default function Navigation({ isNavDark = false }: { isNavDark?: boolean }) {
 
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const pages = {
@@ -15,14 +15,22 @@ export default function Navigation() {
         const url = Object.values(pages)[index];
         const isCurrentPage = window.location.pathname === url;
         return (
-            <>
-                <NavbarMenuItem key={`${item}-${index}`}>
-                    <Link href={url} color={isCurrentPage ? "primary" : "foreground"} aria-current="page" size="lg" className="w-full text-sm font-bold uppercase text-white">
+            <React.Fragment key={`${item}-${index}`}>
+                <NavbarMenuItem>
+                    <Link
+                        href={url}
+                        color={isCurrentPage ? "primary" : "foreground"}
+                        aria-current="page"
+                        size="lg"
+                        className={`w-full text-sm font-bold uppercase ${isNavDark ? "text-black" : "text-white"}`}
+                    >
                         {item}
                     </Link>
                 </NavbarMenuItem>
-                {index !== Object.keys(pages).length - 1 ? <div className="w-[2px] h-2 bg-white/30"></div> : null}
-            </>
+                {index !== Object.keys(pages).length - 1 ? (
+                    <div className={`w-[2px] h-2 ${isNavDark ? "bg-black/30" : "bg-white/30"}`}></div>
+                ) : null}
+            </React.Fragment>
         );
     });
 
@@ -30,10 +38,10 @@ export default function Navigation() {
         <Navbar onMenuOpenChange={setIsMenuOpen} height={"83px"} maxWidth="full" classNames={{ wrapper: "px-0", base: "bg-transparent" }} position="static" isBlurred={false} >
             <Divider
                 orientation="horizontal"
-                className="absolute top-6 h-[1px] w-[calc(100%-95px)] right-2 bg-white"
+                className={`absolute top-6 h-[1px] w-[calc(100%-95px)] right-2 ${isNavDark ? "bg-black" : "bg-white"}`}
             />
             <NavbarContent>
-                <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="sm:hidden" />
+                <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className={`sm:hidden ${isNavDark ? "text-black" : "text-white"}`} />
                 <NavbarBrand>
                     <Link href="/">
                         <Image
@@ -41,7 +49,7 @@ export default function Navigation() {
                             alt="Logo"
                             width={80}
                             height={80}
-                            style={{ top: "5px", left: "5px", filter: "invert(1)" }}
+                            style={{ top: "5px", left: "5px", filter: isNavDark ? "none" : "invert(1)" }}
                         />
                     </Link>
                 </NavbarBrand>
