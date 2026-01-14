@@ -217,7 +217,7 @@ export default function WhoAreWe() {
                 </h2>
 
                 {/* Brand Logos Bar */}
-                <div className="mt-12 w-full max-w-[1240px] flex flex-row justify-start items-center gap-10 opacity-60 px-8 md:pl-5 z-10 flex-wrap">
+                <div className="ml-10 mt-12 w-full flex flex-row justify-start items-center gap-10 opacity-60 px-8 md:pl-36 z-10 flex-wrap">
                     <Image src={WalmartLogo} alt="Walmart" />
                     <Image src={MaineGovLogo} alt="Maine.gov" />
                     <Image src={WalmartLogo} alt="Walmart" />
@@ -227,12 +227,12 @@ export default function WhoAreWe() {
                 </div>
 
                 {/* Separator Line */}
-                <div className="w-full max-w-[1240px] px-8 md:pl-5 z-10 mt-3">
+                <div className="ml-10 w-full px-8 md:pl-36 z-10 mt-3 md:pr-36">
                     <div className="w-full h-[1px] bg-white/30" />
                 </div>
 
                 {/* Timeline Horizontal Area */}
-                <div className="mt-9 w-full z-10 overflow-x-auto overflow-y-hidden no-scrollbar px-8 md:px-[143px]">
+                <div className="mt-9 w-full z-10 overflow-x-auto overflow-y-hidden no-scrollbar px-8 md:px-36">
                     <div className="flex flex-col">
                         {/* Timeline Content Row */}
                         <div className="flex flex-row">
